@@ -253,46 +253,179 @@ build strong media visibility and public trust.
 </div>
 </section>
 
-<!-- COUNTER SLIDER -->
-<section class="counter-section py-5 bg-light">
-    <div class="container">
+<!-- PREMIUM MOVING COUNTER SECTION -->
 
-        <div id="counterSlider" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
+<style>
 
-                <div class="carousel-item active">
-                    <div class="counter-box text-center">
-                        <h2>500+</h2>
-                        <p>Clients Served</p>
-                    </div>
-                </div>
+.counter-section{
+    background:linear-gradient(135deg,#0d6efd,#6610f2);
+    padding:60px 0;
+    overflow:hidden;
+}
 
-                <div class="carousel-item">
-                    <div class="counter-box text-center">
-                        <h2>1000+</h2>
-                        <p>Media Publications</p>
-                    </div>
-                </div>
+.counter-wrapper{
+    width:100%;
+    overflow:hidden;
+}
 
-                <div class="carousel-item">
-                    <div class="counter-box text-center">
-                        <h2>200+</h2>
-                        <p>Events Managed</p>
-                    </div>
-                </div>
+.counter-track{
+    display:flex;
+    gap:30px;
+    width:max-content;
+    animation:scrollCounter 20s linear infinite;
+}
 
-                <div class="carousel-item">
-                    <div class="counter-box text-center">
-                        <h2>50+</h2>
-                        <p>Cities Coverage</p>
-                    </div>
-                </div>
+.counter-track:hover{
+    animation-play-state:paused;
+}
 
+.counter-box{
+    min-width:280px;
+    text-align:center;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:30px;
+    color:#fff;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    transition:0.4s;
+}
+
+.counter-box:hover{
+    transform:translateY(-10px);
+}
+
+.counter-box h2{
+    font-size:55px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.counter-box p{
+    margin:0;
+    font-size:18px;
+    font-weight:500;
+}
+
+@keyframes scrollCounter{
+    0%{
+        transform:translateX(0);
+    }
+    100%{
+        transform:translateX(-50%);
+    }
+}
+
+@media(max-width:768px){
+
+.counter-box{
+    min-width:220px;
+    padding:20px;
+}
+
+.counter-box h2{
+    font-size:40px;
+}
+
+.counter-box p{
+    font-size:15px;
+}
+
+}
+
+</style>
+
+<section class="counter-section">
+
+    <div class="counter-wrapper">
+
+        <div class="counter-track">
+
+            <div class="counter-box">
+                <h2 class="counter" data-target="500">0</h2>
+                <p>Clients Served</p>
             </div>
+
+            <div class="counter-box">
+                <h2 class="counter" data-target="1000">0</h2>
+                <p>Media Publications</p>
+            </div>
+
+            <div class="counter-box">
+                <h2 class="counter" data-target="200">0</h2>
+                <p>Events Managed</p>
+            </div>
+
+            <div class="counter-box">
+                <h2 class="counter" data-target="50">0</h2>
+                <p>Cities Coverage</p>
+            </div>
+
+            <!-- Duplicate For Infinite Scroll -->
+
+            <div class="counter-box">
+                <h2 class="counter" data-target="500">0</h2>
+                <p>Clients Served</p>
+            </div>
+
+            <div class="counter-box">
+                <h2 class="counter" data-target="1000">0</h2>
+                <p>Media Publications</p>
+            </div>
+
+            <div class="counter-box">
+                <h2 class="counter" data-target="200">0</h2>
+                <p>Events Managed</p>
+            </div>
+
+            <div class="counter-box">
+                <h2 class="counter" data-target="50">0</h2>
+                <p>Cities Coverage</p>
+            </div>
+
         </div>
 
     </div>
+
 </section>
+
+<script>
+
+document.querySelectorAll('.counter').forEach(counter => {
+
+    const target = +counter.getAttribute('data-target');
+
+    let count = 0;
+
+    const updateCounter = () => {
+
+        const increment = target / 100;
+
+        if(count < target){
+
+            count += increment;
+
+            counter.innerText = Math.ceil(count) + '+';
+
+            requestAnimationFrame(updateCounter);
+
+        }else{
+
+            counter.innerText = target + '+';
+
+        }
+
+    };
+
+    updateCounter();
+
+});
+
+</script>
+
+
+
+    
 <!-- DIRECTOR MESSAGE -->
 
 <section class="py-5 bg-light">
