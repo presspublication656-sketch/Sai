@@ -1,64 +1,275 @@
-```html
-<!-- =========================
-ABOUT PAGE STRUCTURE
-========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- PAGE BANNER -->
+<title>About ARS Media & PR Services</title>
 
-<section class="page-banner">
-    <div class="container text-center">
-        <h1>About ARS Media & PR Services</h1>
-        <p>Professional Media Relations & Public Relations Agency</p>
-    </div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+/* =====================
+GLOBAL
+===================== */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#f8f9fa;
+}
+
+.section-title{
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+/* =====================
+BANNER
+===================== */
+
+.page-banner{
+    background:linear-gradient(135deg,#0d6efd,#6610f2);
+    color:white;
+    padding:120px 0;
+}
+
+.page-banner h1{
+    font-size:55px;
+    font-weight:700;
+}
+
+.page-banner p{
+    font-size:20px;
+}
+
+/* =====================
+CARDS
+===================== */
+
+.card{
+    border:none;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+/* =====================
+COUNTER
+===================== */
+
+.counter-section{
+    background:#0d6efd;
+    color:white;
+}
+
+.counter-box h2{
+    font-size:45px;
+    font-weight:700;
+}
+
+/* =====================
+CORE VALUES
+===================== */
+
+.value-icon{
+    font-size:50px;
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+/* =====================
+TEAM
+===================== */
+
+.team-card img{
+    height:280px;
+    object-fit:cover;
+}
+
+.team-card{
+    overflow:hidden;
+}
+
+.team-card:hover img{
+    transform:scale(1.05);
+}
+
+.team-card img{
+    transition:.5s;
+}
+
+/* =====================
+TIMELINE
+===================== */
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:50%;
+    top:0;
+    width:4px;
+    height:100%;
+    background:#0d6efd;
+    transform:translateX(-50%);
+}
+
+.timeline-item{
+    width:45%;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.timeline-item:nth-child(odd){
+    margin-right:auto;
+}
+
+.timeline-item:nth-child(even){
+    margin-left:auto;
+}
+
+/* =====================
+CTA
+===================== */
+
+.cta-section{
+    background:linear-gradient(135deg,#0d6efd,#6610f2);
+    color:white;
+}
+
+.cta-btn{
+    border-radius:50px;
+    padding:12px 35px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- HERO BANNER -->
+
+<section class="page-banner text-center">
+<div class="container">
+
+<h1>About ARS Media & PR Services</h1>
+
+<p>
+Professional Public Relations, Media Communication
+& Branding Agency
+</p>
+
+<a href="contact.php"
+class="btn btn-warning btn-lg mt-3">
+Contact Us
+</a>
+
+</div>
 </section>
 
 <!-- COMPANY INTRODUCTION -->
 
 <section class="py-5">
-    <div class="container">
-
-        <div class="row align-items-center">
-
-            <div class="col-lg-6">
-                <img src="assets/images/about-company.jpg"
-                     class="img-fluid rounded shadow">
-            </div>
-
-            <div class="col-lg-6">
-
-                <h2>Company Introduction</h2>
-
-                <p>
-                    ARS Media & PR Services is a leading Public Relations
-                    and Media Communication Agency providing Press Conference,
-                    Press Release Distribution, Digital PR, Event Management
-                    and Branding Solutions across India.
-                </p>
-
-                <p>
-                    We help organizations, businesses, political leaders,
-                    institutions and startups build strong media presence.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- DIRECTOR MESSAGE -->
-
-<section class="bg-light py-5">
-
 <div class="container">
 
 <div class="row align-items-center">
 
-<div class="col-lg-4">
+<div class="col-lg-6">
+<img src="assets/images/about-company.jpg"
+class="img-fluid rounded shadow">
+</div>
+
+<div class="col-lg-6">
+
+<h2 class="section-title">
+Company Introduction
+</h2>
+
+<p>
+ARS Media & PR Services is a leading
+Public Relations and Media Communication
+Agency providing Press Conferences,
+Press Release Distribution, Digital PR,
+Event Management and Branding Solutions.
+</p>
+
+<p>
+We help businesses, political leaders,
+organizations, institutions and startups
+build strong media visibility and public trust.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- COUNTER -->
+
+<section class="counter-section py-5">
+
+<div class="container">
+
+<div class="row text-center">
+
+<div class="col-md-3 counter-box">
+<h2>500+</h2>
+<p>Clients Served</p>
+</div>
+
+<div class="col-md-3 counter-box">
+<h2>1000+</h2>
+<p>Media Publications</p>
+</div>
+
+<div class="col-md-3 counter-box">
+<h2>200+</h2>
+<p>Events Managed</p>
+</div>
+
+<div class="col-md-3 counter-box">
+<h2>50+</h2>
+<p>Cities Coverage</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DIRECTOR MESSAGE -->
+
+<section class="py-5 bg-light">
+
+<div class="container">
+
+<div class="card shadow-lg p-4">
+
+<div class="row align-items-center">
+
+<div class="col-lg-4 text-center">
 
 <img src="assets/images/director.jpg"
-class="img-fluid rounded-circle shadow">
+class="img-fluid rounded-circle border border-4 border-primary"
+width="250">
 
 </div>
 
@@ -69,18 +280,24 @@ class="img-fluid rounded-circle shadow">
 <p>
 Welcome to ARS Media & PR Services.
 Our mission is to connect brands,
-organizations and leaders with the power
-of media and communication.
+organizations and leaders with the
+power of media and communication.
 </p>
 
 <p>
-We believe that strong communication
+We believe strong communication
 creates strong brands.
 </p>
 
-<h5>
+<h5 class="text-primary">
 Director Name
 </h5>
+
+<p>
+Founder & Managing Director
+</p>
+
+</div>
 
 </div>
 
@@ -90,38 +307,33 @@ Director Name
 
 </section>
 
-<!-- VISION & MISSION -->
+<!-- VISION MISSION -->
 
 <section class="py-5">
 
 <div class="container">
 
-<div class="row">
+<div class="row g-4">
 
 <div class="col-md-6">
 
-<div class="card shadow border-0">
-
-<div class="card-body">
+<div class="card p-4 shadow">
 
 <h3>Our Vision</h3>
 
 <p>
-To become India's most trusted media,
-public relations and communication partner.
+To become India's most trusted
+media, public relations and
+communication partner.
 </p>
 
 </div>
 
 </div>
 
-</div>
-
 <div class="col-md-6">
 
-<div class="card shadow border-0">
-
-<div class="card-body">
+<div class="card p-4 shadow">
 
 <h3>Our Mission</h3>
 
@@ -139,8 +351,6 @@ strategic media communication.
 
 </div>
 
-</div>
-
 </section>
 
 <!-- CORE VALUES -->
@@ -149,19 +359,21 @@ strategic media communication.
 
 <div class="container">
 
-<div class="text-center">
+<div class="text-center mb-5">
 
-<h2>Core Values</h2>
+<h2 class="section-title">
+Core Values
+</h2>
 
 </div>
 
-<div class="row mt-4">
+<div class="row g-4">
 
 <div class="col-md-3">
 
-<div class="card text-center shadow">
+<div class="card p-4 text-center">
 
-<div class="card-body">
+<i class="fas fa-handshake value-icon"></i>
 
 <h4>Integrity</h4>
 
@@ -171,19 +383,15 @@ strategic media communication.
 
 </div>
 
-</div>
-
 <div class="col-md-3">
 
-<div class="card text-center shadow">
+<div class="card p-4 text-center">
 
-<div class="card-body">
+<i class="fas fa-lightbulb value-icon"></i>
 
 <h4>Innovation</h4>
 
-<p>Creative Media Solutions</p>
-
-</div>
+<p>Creative Solutions</p>
 
 </div>
 
@@ -191,9 +399,9 @@ strategic media communication.
 
 <div class="col-md-3">
 
-<div class="card text-center shadow">
+<div class="card p-4 text-center">
 
-<div class="card-body">
+<i class="fas fa-shield-alt value-icon"></i>
 
 <h4>Trust</h4>
 
@@ -203,13 +411,11 @@ strategic media communication.
 
 </div>
 
-</div>
-
 <div class="col-md-3">
 
-<div class="card text-center shadow">
+<div class="card p-4 text-center">
 
-<div class="card-body">
+<i class="fas fa-award value-icon"></i>
 
 <h4>Excellence</h4>
 
@@ -223,27 +429,27 @@ strategic media communication.
 
 </div>
 
-</div>
-
 </section>
 
-<!-- TEAM MEMBERS -->
+<!-- TEAM -->
 
 <section class="py-5">
 
 <div class="container">
 
-<div class="text-center">
+<div class="text-center mb-5">
 
-<h2>Our Team</h2>
+<h2 class="section-title">
+Our Team
+</h2>
 
 </div>
 
-<div class="row mt-5">
+<div class="row g-4">
 
 <div class="col-md-3">
 
-<div class="card shadow">
+<div class="card team-card shadow">
 
 <img src="assets/images/team1.jpg"
 class="card-img-top">
@@ -262,7 +468,7 @@ class="card-img-top">
 
 <div class="col-md-3">
 
-<div class="card shadow">
+<div class="card team-card shadow">
 
 <img src="assets/images/team2.jpg"
 class="card-img-top">
@@ -281,7 +487,7 @@ class="card-img-top">
 
 <div class="col-md-3">
 
-<div class="card shadow">
+<div class="card team-card shadow">
 
 <img src="assets/images/team3.jpg"
 class="card-img-top">
@@ -300,7 +506,7 @@ class="card-img-top">
 
 <div class="col-md-3">
 
-<div class="card shadow">
+<div class="card team-card shadow">
 
 <img src="assets/images/team4.jpg"
 class="card-img-top">
@@ -323,19 +529,21 @@ class="card-img-top">
 
 </section>
 
-<!-- COMPANY TIMELINE -->
+<!-- TIMELINE -->
 
 <section class="bg-light py-5">
 
 <div class="container">
 
-<div class="text-center">
+<div class="text-center mb-5">
 
-<h2>Company Timeline</h2>
+<h2 class="section-title">
+Company Timeline
+</h2>
 
 </div>
 
-<div class="timeline mt-5">
+<div class="timeline">
 
 <div class="timeline-item">
 <h4>2018</h4>
@@ -363,9 +571,9 @@ class="card-img-top">
 
 </section>
 
-<!-- CONTACT CTA -->
+<!-- CTA -->
 
-<section class="py-5 text-center bg-primary text-white">
+<section class="cta-section py-5 text-center">
 
 <div class="container">
 
@@ -378,13 +586,15 @@ Contact ARS Media & PR Services Today
 </p>
 
 <a href="contact.php"
-class="btn btn-warning btn-lg">
-
+class="btn btn-warning btn-lg cta-btn">
 Contact Us
-
 </a>
 
 </div>
 
 </section>
-```
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
